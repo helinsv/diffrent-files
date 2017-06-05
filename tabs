@@ -1,0 +1,29 @@
+
+						<div class="tab_phone">
+							<div class="wrapper">
+								<div class="tabs">
+									<span class="tab">Москва</span> / 
+									<span class="tab">Карганда</span>
+								</div>
+								<div class="tab_content">
+									<div class="tab_item">+7 (4722) 21-11-28</div>
+									<div class="tab_item">+7 (919) 439-56-89 </div>
+								</div>
+							</div>
+						</div>					
+
+
+$(document).ready(function(){
+	
+	$(".tab_phone .tab_item").not(":first").hide();
+	$(".tab_phone .wrapper .tab").click(function() {
+		$(".tab_phone .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".tab_phone .tab_item").hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass("active");
+	});
+
+-csss
+.tab_phone.active{
+	background-color: #a97d50;
+	color: white;
+}
