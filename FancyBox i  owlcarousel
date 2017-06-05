@@ -1,0 +1,38 @@
+		loadCSS( "libs/fancybox/jquery.fancybox.css");
+		loadCSS( "libs/owl-carousel/owl.carousel.css");
+
+		{"src" : "libs/fancybox/jquery.fancybox.pack.js", "async" : false},
+		{"src" : "libs/owl-carousel/owl.carousel.min.js", "async" : false},
+
+//Попап менеджер FancyBox Документация: http://fancybox.net/howto
+	$(".fancybox").fancybox();
+
+//Каруселькаокументация: http://owlgraphic.com/owlcarousel/
+	var owl = $(".carousel");
+	owl.owlCarousel({
+		items : 5
+	});
+	owl.on("mousewheel", ".owl-wrapper", function (e) {
+		if (e.deltaY > 0) {
+			owl.trigger("owl.prev");
+		} else {
+			owl.trigger("owl.next");
+		}
+		e.preventDefault();
+	});
+	$(".next_button").click(function(){
+		owl.trigger("owl.next");
+	});
+	$(".prev_button").click(function(){
+		owl.trigger("owl.prev");
+	});
+
+<div class="row">
+					<div class="carousel">							
+						<a class="fancybox" data-fancybox-group="group1" href="img/food-1.jpg"><img src="img/food-1.jpg" alt=""/></a>						
+						<a class="fancybox" data-fancybox-group="group1" href="img/food-2.jpg"><img src="img/food-2.jpg" alt=""/></a>
+						<a class="fancybox" data-fancybox-group="group1" href="img/food-3.jpg"><img src="img/food-3.jpg" alt=""/></a>
+						<a class="fancybox" data-fancybox-group="group1" href="img/food-4.jpg"><img src="img/food-4.jpg" alt=""/></a>
+						<a class="fancybox" data-fancybox-group="group1" href="img/food-5.jpg"><img src="img/food-5.jpg" alt=""/></a>						
+					</div>
+				</div>
