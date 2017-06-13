@@ -1,0 +1,10 @@
+1. cd c:/users/галинка/desktop/web
+2. git init
+3. git status
+4. git add .
+5. git status
+6. git commit -m "first commit"
+
+Створити репозиторій
+1. git remote add origin https://github.com/helinsv/web.git
+2. git push -u origin master
