@@ -8,3 +8,11 @@
 Створити репозиторій
 1. git remote add origin https://github.com/helinsv/web.git
 2. git push -u origin master
+
+
+---клонування
+HTTPS 
+1. Звідки? https://github.com/helinsv/html-jQuery.git
+2. Створюэмо папку куди клонувати
+3. заходимо в директорію cd /c/users/галинка/desktop/web/copy
+4. git clone https://github.com/helinsv/html-jQuery.git
