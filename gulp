@@ -1,0 +1,26 @@
+Інстал з шаблону:
+Видалити gulp: npm remove -g gulp
+1. Відкриваємо командний рядок в папці де буде проект: shift+ПКМ
+2. Встановлення gulp: npm install -g gulp
+3. Встановлення модулів: npm install
+4. Запискаємо gulp: gulp
+5. Провіряємо чи все працює: http://localhost
+6. Створення gulpfilp.js
+
+-----
+Інстал з нуля(не вийшло):
+Видалити gulp: npm remove -g gulp
+1. Відкриваємо командний рядок в папці де буде проект: shift+ПКМ
+2. Встановлення gulp: npm i gulp -g
+3. Встановлення модулів: npm init 
+4. name, version.... yes
+5. Встановлення пакетів: npm i gulp --save-dev
+6. Запискаємо gulp: gulp
+7. Провіряємо чи все працює: http://localhost
+8. Створення gulpfilp.js
+
+-------------
+Запуск gulp
+Видалити gulp: npm remove -g gulp
+1. Відкриваємо командний рядок в папці де буде проект: shift+ПКМ
+2. Запискаємо gulp: gulp
