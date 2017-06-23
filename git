@@ -16,3 +16,5 @@ HTTPS
 2. Створюэмо папку куди клонувати
 3. заходимо в директорію cd /c/users/галинка/desktop/web/copy
 4. git clone https://github.com/helinsv/html-jQuery.git
+
+git clone --depth=16 https://github.com/angular/angular-phonecat.git
