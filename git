@@ -18,3 +18,4 @@ HTTPS
 4. git clone https://github.com/helinsv/html-jQuery.git
 
 git clone --depth=16 https://github.com/angular/angular-phonecat.git
+git checkout -f step-0
