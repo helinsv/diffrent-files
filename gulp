@@ -16,6 +16,9 @@
 3. Встановлення модулів: npm init 
 4. name, version.... yes
 5. Встановлення пакетів: npm i gulp --save-dev
+- Bстановлення sass: npm i gulp-sass --save-dev  instr:  https://www.npmjs.com/package/gulp-sass
+- browser-sync: npm install -g browser-sync instr: https://browsersync.io/docs/gulp
+- bower: npm install -g bower https://www.npmjs.com/package/bower
 6. Запискаємо gulp: gulp
 7. Провіряємо чи все працює: http://localhost
 8. Створення gulpfilp.js
