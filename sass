@@ -50,3 +50,36 @@ p
   text-align: center
   @include text-hover(red)
                                               **********************      
+$lagoon-blue: fade-out(#62fdca, 0.5);
+color: red + blue;
+
+The Sass arithmetic operations are:
+    addition +
+    subtraction -
+    multiplication *
+    division /, and
+    modulo %.
+height: $width/6;
+                                              ********************** 
+$list: (orange, purple, teal);
+@each $item in $list {
+  .#{$item} {
+    background: $item;
+  }
+}
+                                              ********************** 
+$total: 10; 
+@for $i from 1 through $total {
+  .ray:nth-child(#{$i}) {
+    background: adjust-hue(blue, $i * $step);
+   }
+}
+                                              ********************** 
+.lemonade {
+  border: 1px yellow;
+  background-color: #fdd;
+}
+.strawberry {
+  @extend .lemonade;
+  border-color: pink;
+}
