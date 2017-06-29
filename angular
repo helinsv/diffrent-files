@@ -1,0 +1,41 @@
+              ------------ Template, ng-app, ng-controller--------------- https://angularjs.org/#the-basics
+1.app.js
+var app = angular.module("myApp", []);
+
+2.index.html
+<body ng-app="myApp">
+
+3.js/controllers/MainController.js. 
+app.controller('MainController', ['$scope', function($scope) { 
+  $scope.title = 'Top Sellers in Books'; 
+   $scope.product = {
+    name: 'The Book of Trees', 
+    price: 19 
+ }
+}]);
+
+4.index.html.
+<div class="main" ng-controller="MainController">
+
+5.index.html 
+<h1>{{ title }}</h1>
+
+              ------------ng-repeat, ng-src---------------
+$scope.products =
+   [ 
+  { 
+    name: 'Program or be Programmed'
+    cover: 'img/program-or-be-programmed.jpg' 
+  } 
+]
+
+<div ng-repeat="product in products" > 
+  <p class="title">{{ product.name }}</p> 
+  <img ng-src="{{ product.cover }}">
+</div>
+------------function, ng-click---------------
+$scope.plusOne = function(index) { 
+  $scope.products[index].likes += 1; 
+};
+
+ <p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}</p> 
