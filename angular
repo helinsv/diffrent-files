@@ -39,3 +39,33 @@ $scope.plusOne = function(index) {
 };
 
  <p class="likes" ng-click="plusOne($index)">+ {{ product.likes }}</p> 
+---------------2 directive app-info
+app.directive('appInfo', function() { 
+  return { 
+    restrict: 'E', 
+    scope: { 
+      info: '=' 
+    }, 
+    templateUrl: 'js/directives/appInfo.html' 
+  }; 
+});
+
+<h2 class="title">{{ info.title }}</h2> 
+<p class="developer">{{ info.developer }}</p> 
+
+app.controller('MainController', ['$scope', function($scope) {
+ $scope.apps = [
+   {
+    icon: 'img/move.jpg',
+    title: 'MOVE',
+    developer: 'MOVE, Inc.',
+    price: 0.99
+   }]
+}]);
+
+<div class="container">
+  <div class="card" ng-repeat = "app in apps"> 
+     <appp-info info="app"></appp-info> 
+  </div>        
+</div>
+------------3
