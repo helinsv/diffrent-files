@@ -26,3 +26,37 @@ CSS:
 	background-color: #a97d50;
 	color: white;
 }
+
+
+
+**************
+<div class='projects-button'>Recent Projects</div>
+        <ul class='projects'>
+          <li>Password Validator</li>
+          <li>Whale Talk</li>
+        </ul>
+
+function main() {
+$('.projects-button').on('click', function() {
+ $(this).next().slideToggle(400);
+    $(this).toggleClass('active');
+    $(this).text('Projects Viewed')
+  });
+ 
+}
+
+$(document).ready(main);
+
+************
+$('.my-selector').hide();
+$('.example-class').fadeIn(400);
+$('.example-class').show();
+$('.projects').toggle();
+$('.example-class').toggleClass('active');
+$('.item-one').next().hide();
+$('.my-selector').text('Hello world!');
+
+$('.example-class').on('click', function() {
+  // execute the code here when .example-class is clicked.
+});
+
