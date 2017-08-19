@@ -1,0 +1,98 @@
+$(document).ready(function() {
+----1
+$("div").fadeOut(1000);
+$("div").slideDown('slow') ;
+
+$('div').mouseenter(function() {
+    $('div').fadeTo('fast',0.5);
+});
+--------2
+$('div').hide();
+$('.red').click(function(){        
+    $('.red').fadeOut('slow');
+    $('.green').fadeIn('slow');
+});
+$target = $('li:last-child');
+$target.fadeOut('fast');
+++++
+$('div').click(function() {
+  $(this).fadeOut('slow');
+});
+++++
+
+--------3
+$(".hide-button").click(function() {
+		$("nav").slideToggle('slove');
+	});
+-----
+$('body').append("<p>I'm a paragraph!</p>");
+----
+$('div #one').after('<p>1111</p>');
+$('div #one').before('<p>1111</p>');
+-----
+$('p').remove();
+---------
+.addClass()   .removeClass() .toggleClass()
+ $('#text').addClass('highlighted');
+----------
+$("div").height("100px");
+$("div").width("50px");
+$("div").css("background-color","#008800");
+-------
+$('div').html("I love jQuery!");
+$('input:checkbox:checked').val();
+var toAdd = $('input[name=checkListItem]').val();
+------4
+$('button').click(function() {
+    var toAdd = $("input[name=message]").val();
+    $('#messages').append("<p>"+toAdd+"</p>");
+});
+-----
+$('div').hover(function(){    
+    $('div').addClass('red');
+});
+-------
+$('div').dblclick(function(){
+    $('div').fadeOut('fast');
+});
++++
+$('div').hover(
+    function(){
+     $(this).addClass('active');
+    },
+    function(){
+     $(this).removeClass('active');
+    }
+  );
+---
+$('input').focus(function(){
+    $(this).css('border-color', 'red');
+});
+----
+$(document).keydown(function(){
+    $('div').animate({left:'+=10px'}, 500);
+});
+-------5
+$('img').animate({top:'+=100px'},1000);
+----
+$('div').click(function(){
+    $(this).effect('explode');
+	$(this).effect('bounce',{times:3}, 500);
+	$(this).effect('slide',{times:30}, 500);
+});
+++++++++
+ $("#menu").accordion({collapsible: true, active: false});
+----
+ $('#car').draggable();
+ ----
+ $('div').resizable();
+ ---
+  $('ol').selectable();
+	
+	
+	
+	
+	
+	
+	
+});
