@@ -1,0 +1,76 @@
+<nav>
+		<div class="wraper">
+			<div class="btn-toggle">|||</div>
+			<ul class="top-menu">
+				<li><a href="">lorem</a></li><li>
+				<a href="">lorem</a></li><li>
+				<a href="">lorem</a></li><li>
+				<a href="">lorem</a></li><li>
+				<a href="">lorem</a></li>
+			</ul>
+		</div>
+	</nav>
+  
+ /////////////////////////////////////// 
+  body{
+	margin: 0px;
+	padding: 0px;
+}
+
+nav{
+	background: pink;
+}
+
+.wraper{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 30px;
+	position: relative;
+}
+
+.top-menu{	
+	margin: 0px;
+	padding: 0px;
+}
+
+.top-menu li{
+	display: inline-block;
+	padding: 10px 15px;
+}
+
+.btn-toggle{
+	display: none;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	background-color: red;
+	text-align: center;
+	line-height: 40px;
+}
+@media screen and (max-width: 500px){
+	.top-menu{
+		display: none;
+		position: absolute;
+	}
+
+	.top-menu li{
+		display: block;
+		padding: 5px 15px;
+		background: pink;
+	}
+
+	.btn-toggle{
+		display: block;
+	}
+
+}
+/////////////////////////////////////
+$(function(){	
+	$('.btn-toggle').click(function(){
+		$('.top-menu ').slideToggle(300, function(){
+			if ($(this).css('display')==='none'){
+				$(this).removeAttr('style');
+			}});	
+	})
+	
+});
