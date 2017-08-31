@@ -1,6 +1,6 @@
 <nav>
 		<div class="wraper">
-			<div class="btn-toggle">|||</div>
+			<div class="btn-toggle"><img src="img/menu-mobile.png">|||</div>
 			<ul class="top-menu">
 				<li><a href="">lorem</a></li><li>
 				<a href="">lorem</a></li><li>
