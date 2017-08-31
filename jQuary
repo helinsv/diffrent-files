@@ -1,3 +1,8 @@
+$('.item .ask').click(function(){
+  $(this).next().slideToggle();		
+})
+-----------------
+
 $(document).ready(function() {
 ----1
 $("div").fadeOut(1000);
