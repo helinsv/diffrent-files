@@ -1,0 +1,42 @@
+.items-t{
+	margin: 0 -1rem;
+	display: flex;	
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.talents-item{
+	text-align: center;
+	background-color: #fff;
+	border-radius: 0.5rem;
+	padding: 10px;
+	margin: 1rem;		
+	flex-basis: calc(100%/4 - 2rem);
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+/*
+display: flex;
+flex-direction: column; 
+- напрям
+flex-wrap: wrap;	
+- перенос на новий рядок
+justify-content: center;
+- по вертикалі вирівн
+align-items: stretch;
+- по замовчуванню на всю висоту
+flex-basis: 300px;
+- розмір який охороняється
+flex-grow: 0;
+ - все пусте місце додається до цього ел
+align-self:flex-end;
+- вирівнює окремі елементи
+order:-1;
+- сортування
+}
+*/
