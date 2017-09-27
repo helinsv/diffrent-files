@@ -4,12 +4,38 @@
 4. git add . (adds files from the working directory to the staging area)
 5. git status
 6. git commit -m "first commit" (permanently stores file changes from the staging area in the repository)
+   git commit --amend -m "Add an author/email comment"(додаємо до існуючого останього коміту правки)
 7. git log (shows a list of all previous commits)
 
 Створити репозиторій
 1. git remote add origin https://github.com/helinsv/web.git
 2. git push -u origin master
 
+Переглянути який є віддалений репозиторій 
+git remote
+
+-------- changes made to your Git project     
+CHECKOUT
+- Перейти до певного комміту
+git checkout b737544
+
+- Перейти до останього комміту
+git checkout master
+
+- Відмінити зроблені зміни в мастер (14пункт)
+//git checkout HEAD changes.txt (Discards changes in the working directory.)
+git checkout hello.html
+
+- Відміна дій "git add hello.html"
+//git reset HEAD filename (Unstages file changes in the staging area.)
+git reset HEAD hello.html
+щоб змінити і сам файл (попередній пункт) "git checkout hello.html"
+
+- Видалення комітів зроблених після тегу v1
+//git reset SHA (Can be used to reset to a previous commit in your commit history.)
+git reset --hard v1
+git reset --hard 9020399
+git log --all (показує всі коменти з видаленими)
 
 ---клонування
 HTTPS 
@@ -19,21 +45,17 @@ HTTPS
 4. git clone https://github.com/helinsv/html-jQuery.git
 або 
 git clone --depth=16 https://github.com/angular/angular-phonecat.git
-5. Переходимо в потрыбну версыю git checkout -f step-0
+5. Переходимо в потрыбну версыю git пcheckout -f step-0
 
 git diff filename (shows the difference between the working directory and the staging area)
 git show HEAD
 
--------- changes made to your Git project
-     git checkout HEAD changes.txt (Discards changes in the working directory.)
-     git reset HEAD filename (Unstages file changes in the staging area.)
-     git reset SHA (Can be used to reset to a previous commit in your commit history.)
-
-
 -------- Git branch workflow.
     git branch: Lists all a Git project's branches
-    git branch branch_name: Creates a new branch.
-    git checkout branch_name: Used to switch from one branch to another/переходимо у відпов. branch
+    git checkout -b branch_name (то саме що зробити п.1 і п.2, створити і перейти в нову гілку)
+    1. git branch branch_name: Creates a new branch.
+    2. git checkout branch_name: Used to switch from one branch to another/переходимо у відпов. branch)
+    
     git merge branch_name: Used to join file changes from one branch to another/зєднання
     git branch -d branch_name: Deletes the branch specified./видалення branch
     
