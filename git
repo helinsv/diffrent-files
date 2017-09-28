@@ -1,3 +1,5 @@
+https://githowto.com/ru
+
 1. cd c:/users/галинка/desktop/web
 2. git init (creates a new Git repository)
 3. git status  (inspects the contents of the working directory and staging area)
