@@ -1,0 +1,45 @@
+      <div class="modal_form">
+					<h1>Lorem ipsum dolor sit amet.</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse tenetur nihil voluptas tempora, et soluta.</p>
+					<button class="close-btn">X</button>
+				</div>	
+        
+    <script>
+				$(document).ready(function() {	
+					$('.modal_form')
+					.css('display', 'block')
+					.animate({opacity: 1}, 500); 
+					
+					$('.close-btn').click(function(){
+						$('.modal_form').fadeOut(400); 							
+					});
+				});			
+    </script>			
+    
+.modal_form{	
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	top: 50%;
+	right: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+	opacity: 0;
+	z-index: 5; 
+	background-color: #fff;
+	border-radius: 5px;
+	border: 3px #000 solid;
+	padding: 20px 10px;
+	text-align: center;
+	display: none;
+}
+
+.close-btn{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+	display: block;
+}
