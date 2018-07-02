@@ -1,20 +1,9 @@
-      <div class="modal_form">
-					<h1>Lorem ipsum dolor sit amet.</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse tenetur nihil voluptas tempora, et soluta.</p>
-					<button class="close-btn">X</button>
-				</div>	
-        
-    <script>
-				$(document).ready(function() {	
-					$('.modal_form')
-					.css('display', 'block')
-					.animate({opacity: 1}, 500); 
-					
-					$('.close-btn').click(function(){
-						$('.modal_form').fadeOut(400); 							
-					});
-				});			
-    </script>			
+<div class="modal_form">
+	<h1>Lorem ipsum dolor sit amet.</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse tenetur nihil voluptas tempora, et soluta.</p>
+	<button class="close-btn">X</button>
+</div>	      
+    
     
 .modal_form{	
 	width: 200px;
@@ -43,3 +32,39 @@
 	cursor: pointer;
 	display: block;
 }
+
+<script>
+	$(document).ready(function() {	
+		$('.modal_form')
+		.css('display', 'block')
+		.animate({opacity: 1}, 500); 
+
+		$('.close-btn').click(function(){
+			$('.modal_form').fadeOut(400); 							
+		});
+	});			
+</script>
+
+/*
+*
+MODAL FORM with cooks
+*
+*/    
+<script>
+(function () {
+	$(".close-btn").click(function () {
+		$.cookie("popup", "1", {expires: 1} );
+		$(".modal_form").fadeOut(400); 
+	});
+
+	if ( $.cookie("popup") == null )
+		{
+			setTimeout(function(){
+			$(".modal_form").animate({opacity: 1}, 500)
+							.show();
+			}, 1000)
+		}
+	else { $(".modal_form").fadeOut(400); }
+
+})();
+</script>	
