@@ -1,0 +1,51 @@
+<div class="line">Line</div>				
+
+<style>
+  .line{
+    width: 0px;
+    border-bottom: 1px solid;
+    transition: 1s;
+  }				
+
+  .line:hover{
+    pointer:cursor;
+    width: 150px;
+  }
+
+  <button class="new-btn">Ok</button>
+
+  button{	
+    background: #231f20;
+    color: #fce373;
+    position: relative;
+    padding: 6px 20px;
+    margin: 10px 0;
+    line-height: 26px;
+    font-weight: 400;
+    text-align: center;						
+    font-size: 16px;	
+    z-index: 1;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+  }
+
+  button:after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 0%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #caa498;
+    color: #231f20;						
+    transition: all .4s ease-in-out;						
+  }
+
+  button:hover{
+    color: #231f20;	
+  }
+
+  button:hover:after{
+    width:100%;
+  }
