@@ -71,3 +71,20 @@ git show HEAD
 ///////////////////
 делаем откат изменений в репозитории для примера на два коммита назад
 git reset --hard HEAD~2
+
+///робота над новим куском коду
+git add .
+git commit -m test1
+git branch new
+git checkout new
+git add.
+git commit -m new1
+git add.
+git commit -m new2
+git checkout master
+git merge new
+---буде писати що є різні файли треба видалити що лишнє є в коді. Треба вручну ці зміни зробити
+git merge new - обєднує дві гілки
+git branch -d new
+Залишилася одна гілка з останьою версією.
+
