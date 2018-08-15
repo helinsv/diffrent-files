@@ -67,3 +67,7 @@ git show HEAD
     git fetch: Fetches work from the remote into the local copy.
     git merge origin/master: Merges origin/master into your local branch.
     git push origin <branch_name>: Pushes a local branch to the origin remote.
+ 
+///////////////////
+делаем откат изменений в репозитории для примера на два коммита назад
+git reset --hard HEAD~2
