@@ -1,0 +1,66 @@
+http://www.wordpress-polska.pl/o-wordpressie/wordpress-instalacja/
+1. Скачати wordpress 
+2. Розпаковану папку скинути на сервер
+3. Створити БД
+4. wp-config-sample.php змінити на wp-config.php
+
+/** Nazwa bazy danych, której używać ma WordPress */
+define(‚DB_NAME’, ‚nazwa_bazy_danych’);
+
+/** Nazwa użytkownika bazy danych MySQL */
+define(‚DB_USER’, ‚nazwa_uzytkownika’);
+
+/** Hasło użytkownika bazy danych MySQL */
+define(‚DB_PASSWORD’, ‚haslo’);
+
+/** Nazwa hosta serwera MySQL */
+define(‚DB_HOST’, ‚localhost’);
+
+                                                  ------------і------------
+
+define('AUTH_KEY',         '$tWJAv3@^!yx0U?}KO#F$xPdz60TEo+kw3v(2LK|gDXx<=h-dK&=2^9d|,VNAOE$');
+define('SECURE_AUTH_KEY',  'e_`kHaEt2BYZK;;z$}CJL86 r-FP/;2fM F&o]^t |Rzmc|^.E|zhU0?~K:sH)HB');
+define('LOGGED_IN_KEY',    'aoxc7P=-0IQ,[SdZu a.=KDEhADzc3pQ-rk:WpYDn35]0@q8n|>fhL0vA&og>=S)');
+define('NONCE_KEY',        '?.;WBx]Gn?8iqxw*D$T7%ENqt9`%t$2{]|Xs9!rUO:_OmcM#G(9eC7<|tbYxaB1F');
+define('AUTH_SALT',        'J;-q&BoaeACzCYJc6#qqH#_N59FT^`*p|QCKv-&|iOtVYlS+UF95i!b$]+M!t|WD');
+define('SECURE_AUTH_SALT', ')}L3e~z}0F%E,|LOw 1TV7M>QX%nZck+Okv9G^*E2L_128EPo.P|ZJU|KuoP`Vtq');
+define('LOGGED_IN_SALT',   'sT_m+OE+gsf5IY0J|kT~7)7}(sb>v(-^q?y</^)T6z@5bZabC7KAfZ_}U.$q}i9p');
+define('NONCE_SALT',       'k^bonmnPYx,-pRtv{RqO{J-j+t@{|q|6P/yM=(sn^Y6WB0orUgBM>x_ah7Ii,9d1');
+
+5. Заходимо по ссилці і автоматично настроюємо WP
+http://www.nasza-domena.pl/wp-admin/install.php
+http://www.nasza-domena.pl/wordpress/wp-admin/install.php
+
+************Створення теми***********
+1. Створити папку теми в /wp-content/themes/Назва теми
+2. Додати 2 файли index.php и style.css
+3. В style.css додаємо дані
+/*
+Theme Name: Тема для Миши
+Version: 105.1
+Description: Вполне себе годная темка, получше некоторых
+Author: Миша Рудрастых
+Author URI: https://misha.blog
+*/
+
+/*
+Theme Name: the monday child
+Theme URL: https://helinsv.000webhostapp.com/
+Description: the monday child 
+Theme Author: Helin Shevchuk
+Author URL: https://helinsv.000webhostapp.com/
+Template: the-monday
+Version: 1.1
+Text Domain: the-monday-child
+*/
+body{color:#555;} /* это типо я показываю, что дальше идут уже ваши CSS стили */
+
+4. Додати в index.php
+
+<?php
+add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+
+function enqueue_parent_styles() {
+   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+}
+?>
