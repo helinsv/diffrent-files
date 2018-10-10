@@ -64,3 +64,5 @@ function enqueue_parent_styles() {
    wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
 }
 ?>
+
+5. Добавити в папку 880х660 в папку файл screenshot.png(880х660)
