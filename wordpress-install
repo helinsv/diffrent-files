@@ -32,8 +32,8 @@ http://www.nasza-domena.pl/wp-admin/install.php
 http://www.nasza-domena.pl/wordpress/wp-admin/install.php
 
 ************Створення теми***********
-1. Створити папку теми в /wp-content/themes/Назва теми
-2. Додати 2 файли index.php и style.css
+1. Створити папку теми в /wp-content/themes/Назва теми або Назва теми-child
+2. Додати 2 файли functions.php и style.css
 3. В style.css додаємо дані
 /*
 Theme Name: Тема для Миши
@@ -49,13 +49,13 @@ Theme URL: https://helinsv.000webhostapp.com/
 Description: the monday child 
 Theme Author: Helin Shevchuk
 Author URL: https://helinsv.000webhostapp.com/
-Template: the-monday
+Template: the-monday /*(без пробілів twentyseventeen, подивитися, як тема записана)*/
 Version: 1.1
 Text Domain: the-monday-child
 */
 body{color:#555;} /* это типо я показываю, что дальше идут уже ваши CSS стили */
 
-4. Додати в index.php
+4. Додати в functions.php
 
 <?php
 add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
