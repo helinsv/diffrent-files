@@ -43,15 +43,15 @@ Author: Миша Рудрастых
 Author URI: https://misha.blog
 */
 
-/*
-Theme Name: the monday child
-Theme URL: https://helinsv.000webhostapp.com/
-Description: Description the monday child 
-Author: Helin Shevchuk
-Author URL: https://helinsv.com/
-Template: the-monday /*(без пробілів twentyseventeen, подивитися, як тема записана)*/
-Version: 1.1
-Text Domain: the-monday-child
+/*   
+Theme Name: Rose
+Theme URI: домашняя-страница-темы
+Description: краткое-описание-темы
+Author: ваше-имя
+Author URI: ваш-URI
+Template: напишите-здесь-наименование-родительской-темы--необязательное-поле
+Version: номер-версии--необязательное-поле
+Развёрнутое описание темы/Лицензия-если-нужно.
 */
 body{color:#555;} 
 
