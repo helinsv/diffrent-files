@@ -31,7 +31,7 @@ define('NONCE_SALT',       'k^bonmnPYx,-pRtv{RqO{J-j+t@{|q|6P/yM=(sn^Y6WB0orUgBM
 http://www.nasza-domena.pl/wp-admin/install.php
 http://www.nasza-domena.pl/wordpress/wp-admin/install.php
 
-************Створення теми***********
+************Створення теми child***********
 1. Створити папку теми в /wp-content/themes/Назва теми або Назва теми-child
 2. Додати 2 файли functions.php и style.css
 3. В style.css додаємо дані
@@ -46,14 +46,14 @@ Author URI: https://misha.blog
 /*
 Theme Name: the monday child
 Theme URL: https://helinsv.000webhostapp.com/
-Description: the monday child 
-Theme Author: Helin Shevchuk
-Author URL: https://helinsv.000webhostapp.com/
+Description: Description the monday child 
+Author: Helin Shevchuk
+Author URL: https://helinsv.com/
 Template: the-monday /*(без пробілів twentyseventeen, подивитися, як тема записана)*/
 Version: 1.1
 Text Domain: the-monday-child
 */
-body{color:#555;} /* это типо я показываю, что дальше идут уже ваши CSS стили */
+body{color:#555;} 
 
 4. Додати в functions.php
 
