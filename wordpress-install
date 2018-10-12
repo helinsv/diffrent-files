@@ -58,12 +58,31 @@ body{color:#555;}
 4. Додати в functions.php
 
 <?php
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
-
-function enqueue_parent_styles() {
-   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+function my_styles() {
+	wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' ); /*основний шаблон*/
+	wp_enqueue_style( 'bootstrap-min-css', get_stylesheet_directory_uri() .'/css/bootstrap.min.css' );	 /*child */
 }
+	add_action( 'wp_enqueue_scripts', 'my_styles' );
 ?>
 
 5. Добавити в папку 880х660 в папку файл screenshot.png(880х660)
 6. Зайти в теми і активузувати вибрану тему
+
+
+<img src="<?php bloginfo('stylesheet_directory') ?>/image/logo.png" alt="">
+<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png" alt="Logo" />
+
+<?php get_header(); ?>
+<div class="main-heading">
+	<h1><?php the_title(); ?></h1>
+</div>
+<section class="container>
+	<div class="row">
+		<div class="col-md-12">
+			<?php if (have_posts()): while (have_posts()): the_post(); ?>
+				<?php the_content(); ?>
+			<?php endwhile; endif; ?>
+		</div>
+	</div>
+</section>
+<?php get_footer(); ?>
