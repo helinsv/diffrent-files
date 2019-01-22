@@ -28,3 +28,8 @@
 Видалити gulp: npm remove -g gulp
 1. Відкриваємо командний рядок в папці де буде проект: shift+ПКМ
 2. Запискаємо gulp: gulp
+
+
+-----
+Копіювання проекту git clone https://github.com/helinsv/Welford.git
+Встановлення модулів: npm install
