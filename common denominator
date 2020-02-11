@@ -2,10 +2,10 @@ const input = [10, 15, 525];
 const N = 3;
 
 function min(a) {
+    var min = a[0];
     for (let i = 0; i < a.length; i++) {
-        var min = a[i];
-        if (min > a[i + 1]) {
-            main = a[i + 1];
+        if (min > a[i]) {
+            min = a[i];
         }
     }
     return min;
