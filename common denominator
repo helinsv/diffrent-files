@@ -1,0 +1,59 @@
+const input = [10, 15, 525];
+const N = 3;
+
+function min(a) {
+    for (let i = 0; i < a.length; i++) {
+        var min = a[i];
+        if (min > a[i + 1]) {
+            main = a[i + 1];
+        }
+    }
+    return min;
+};
+
+
+function divide(a) {
+    const b = [];
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < min; j++) {
+            if (a[i] % j == 0) {
+                b.push(j);
+            }
+        }
+    }
+    console.log('cont=' + b);
+    return b;
+};
+
+
+function result(divide) {
+    const res = [];
+    var clonedivide = divide.slice();
+
+    for (let i = 1; i < divide.length; i++) {
+        var myCount = 0;
+        for (let j = 0; j < clonedivide.length; j++) {
+            if (divide[i] === clonedivide[j]) {
+                myCount++;
+                delete clonedivide[j];
+            }
+        }
+
+        if (myCount > N - 1) {
+            res.push(divide[i]);
+        }
+    }
+    console.log('result=' + res);
+
+    // for (let i = 1; i < divide.length; i++) {
+    //     if (divide[i] === divide[i - 1]) {
+    //         res = divide[i];
+    //         console.log('result=' + res);
+    //     }
+    // }
+}
+
+var min = min(input);
+var divide = divide(input);
+result(divide);
+
